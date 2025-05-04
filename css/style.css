@@ -1,4 +1,4 @@
-/* General Styles */
+/* Typography Enhancement */
 :root {
     --primary-color: #5b8266ff; /* Viridian - main brand color */
     --secondary-color: #aef6c7ff; /* Celadon - accent color */
@@ -10,10 +10,210 @@
     --card-background: #32353d; /* Between gunmetal and light background */
     --border-color: #474c57; /* Lighter than gunmetal for borders */
     --success-color: #5b8266ff; /* Viridian - for success messages */
-    --font-main: 'Roboto', sans-serif;
+    
+    /* Enhanced Typography */
+    --font-main: 'Inter', 'Roboto', sans-serif;
     --font-heading: 'Montserrat', sans-serif;
+    --font-accent: 'Playfair Display', serif;
+    --font-code: 'Fira Code', 'Consolas', monospace;
 }
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+/* Typography Base Styles */
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* Hero Section Typography */
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.hero-content h3 {
+    font-family: var(--font-accent);
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: var(--light-text);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Timeline Typography */
+.timeline-content h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.timeline-content h4 {
+    font-family: var(--font-accent);
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.timeline-date {
+    font-family: var(--font-code);
+    background-color: var(--primary-color);
+    color: var(--background);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* Skills Category Headers */
+.skill-category h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.skill-item {
+    font-family: var(--font-code);
+    background-color: var(--background);
+    color: var(--text-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+}
+
+/* Project Cards Typography */
+.project-info h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.project-tags span {
+    font-family: var(--font-code);
+    background-color: var(--background);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+}
+
+/* Education Section Typography */
+.education-info h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.education-info h4 {
+    font-family: var(--font-accent);
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.education-date {
+    font-family: var(--font-code);
+    font-style: normal;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Logo Typography */
+.logo {
+    font-family: var(--font-accent);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 0.02em;
+}
+
+/* Navigation Links */
+.nav-links a {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+}
+
+/* Paragraph Text */
+p {
+    font-family: var(--font-main);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+/* Buttons Typography */
+.btn {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
 * {
     margin: 0;
     padding: 0;
